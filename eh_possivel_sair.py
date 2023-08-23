@@ -59,15 +59,15 @@ pos_final = (m_lab1 - 2, n_lab1 - 1)
 
 labirinto1 = [
   ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'], 
-  [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#'], 
+  [' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#'], 
   ['#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#'], 
-  ['#', ' ', '#', '#', ' ', '#', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'], 
-  ['#', ' ', ' ', ' ', ' ', ' ', '#', '#', ' ', ' ', ' ', ' ', '#', ' ', '#'], 
+  ['#', ' ', '#', '#', ' ', '#', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#'], 
+  ['#', ' ', ' ', ' ', ' ', ' ', '#', '#', '#', ' ', ' ', ' ', '#', ' ', '#'], 
   ['#', '#', ' ', '#', ' ', ' ', ' ', ' ', '#', ' ', ' ', '#', ' ', ' ', ' '], 
   ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#']
 ]
 
-print_lab(labirinto1)
+print_lab(lab)
 
 def eh_possivel_sair(lab, pos_inicial, pos_final):
   pos_inviaveis = []
@@ -110,11 +110,11 @@ def eh_possivel_sair(lab, pos_inicial, pos_final):
     else:
         pos_inviaveis.append(pos_atual)
 
-        trajeto.pop()
+        
 
-        pos_atual = trajeto.top()
+        pos_atual = trajeto.pop()
 
   return False
 
 
-print(eh_possivel_sair(labirinto1, pos_inicial, pos_final, ))
+print(eh_possivel_sair(lab, pos_inicial, pos_final))
